@@ -1,38 +1,315 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-  <meta name="description" content="Ropa y accesorios para mujer">
-  <meta name="keywords" content=" Ropa para mujer, Accesorios, Maison Alexa, Blusas, Vestidos, Bolsas, Collares ">
+        <meta charset="UTF-8">
+  <meta name="description" content="Boutique de ropa y accesorios.">
+  <meta name="keywords" content="ropa para mujer, accesorios, Maison Alexa, bolsas, joyería, vestidos">
   <meta name="author" content="Alexa Cedillo">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maison Alexa | Alexa Cedillo </title>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+ <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js"></script>
+
+  
+<title>Alexa Cedillo | Boutique de ropa</title>
 </head>
-<!--Aquí inicia el cuerpo de mi página-->
+<!--AQUÍ INICIA EL CUERPO DE MI PÁGINA-->
 <body>
-    <!--===============Encabezado de la página===========-->
-    <header class="Maison Alexa">
-        <div class="container header-inicio">
-            <a href="#inicio" class="logo-Maison Alexa">
-                <img src="img/logo.jpeg" alt="logo de Maison Alexa">
-            </a>
-        <nav class="Maison Alexa">
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#productos">Productos</a></li>
-                <li><a href="#about">Beneficios</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-                <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero hacer un pedido.')">
-            <i data-lucide="message-circle"></i> Enviar mensaje
-        </button>
+<!--==========ENCABEZADO DE LA PÁGINA==========-->
+        <header class="header-Maison-Alexa">
+            <div class="container header-inicio">
+                <a href="#inicio" class="logo-maison-alexa">
+                    <img src="img/logo.jpeg" alt="logo-alexa">
+                </a>
 
-        </nav>
+
+                <nav class="nav-Maison-Alexa">
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#beneficios">Beneficios</a></li>
+                        <li><a href="#oferta">Oferta</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+
+                    </ul>
+                    <button type="button" class="btn primary" onclick="openWhatsApp('Hola, quiero hacer un pedido en Maison Alexa.')">
+                    <i data-lucide="message-circle"></i> Enviar mensaje
+
+                    </nav>
+
+
+
+            </div>
+        </header>
+<!--===== CONTENIDO PRINCIPAL =====-->
+
+<main>
+
+    <!--===== SECCIÓN DEL HERO =====-->
+    <section class="intro" aria-labelledby="intro-title">
+      <p class="intro-eyebrow">Bienvendos a Maison Alexa</p>
+      <h1 class="intro-title" id="intro-title">MODA.<br><span> Y ESTILO.</span></h1>
+      <p class="intro-description">Descubre tu estilo ideal.</p>
+    </section>
+
+<!--============ Aquí vamos a colocar el vídeo y dos imágenes===========-->
+ <!-- Galería principal: un video y dos imágenes -->
+    <section class="gallery" id="galeria" aria-label="Galería principal">
+
+
+<!-- VIDEO -->
+
+<article class="media-card media-card--video" data-video-card>
+
+  <!-- Video de presentación -->
+
+  <video
+
+    class="media-card__media"
+
+    data-hover-video
+
+    muted
+
+    loop
+
+    playsinline
+
+    preload="metadata"
+
+    aria-label="Video de presentación"
+
+    onmouseenter="this.play()"
+
+    onmouseleave="this.pause(); this.currentTime=0;">
+
+    <source src="img/video-hero.mp4" type="video/mp4">
+
+    Tu navegador no puede reproducir este video.
+
+  </video>
+
+
+        <!-- Capa oscura que permite leer el texto sobre el video -->
+        <div class="media-card__shade" aria-hidden="true"></div>
+
+
+        <!-- Texto que aparece sobre el panel -->
+        <div class="media-card__content">
+          <p class="media-card__number"> BOUTIQUE</p>
+          <h2 class="media-card__title">NUESTROS PRODUCTOS<br>MÁS VENDIDOS</h2>
+          <a class="media-card__link" href="#contacto">Descubrir <span aria-hidden="true">↗</span></a>
         </div>
-    </header>
-<p>Encuentra tu estilo ideal.</p>
-<h1>Maison Alexa</h1>
 
+
+        <!-- Control visible en pantallas táctiles y accesible con teclado -->
+        <button class="video-toggle" type="button" data-video-toggle aria-label="Reproducir video" aria-pressed="false">
+          <span class="video-toggle__icon" data-toggle-icon aria-hidden="true">▶</span>
+          <span class="video-toggle__text" data-toggle-text>Reproducir video</span>
+        </button>
+      </article>
+
+
+      <!--  IMAGEN 1-->
+      <article class="media-card">
+        <!-- Reemplaza trayectoria.jpg por el nombre de tu fotografía. -->
+        <img
+          class="media-card__media media-card__image"
+          src="img/hero-1.jpg"
+          alt="Nuestra Boutique"
+          loading="lazy">
+
+
+        <div class="media-card__shade" aria-hidden="true"></div>
+
+
+        <div class="media-card__content">
+          <p class="media-card__number">02 / Joyería, zapatos, lentes y bolsas</p>
+          <h2 class="media-card__title">EXPLORA NUESTROS<br>ACCESORIOS</h2>
+          <a class="media-card__link" href="#contacto">Conocer más <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+
+      <!--  IMAGEN 2-->
+      <article class="media-card">
+        <!-- Reemplaza proyectos.jpg por el nombre de tu fotografía. -->
+        <img
+          class="media-card__media media-card__image"
+          src="img/hero-2.jpg"
+          alt="Fotografía que representa mis proyectos"
+          loading="lazy">
+
+
+        <div class="media-card__shade" aria-hidden="true"></div>
+
+
+        <div class="media-card__content">
+          <p class="media-card__number">03 / DISEÑOS</p>
+          <h2 class="media-card__title">VEN Y CONOCE NUESTROS <br>DISEÑOS EN ROPA</h2>
+          <a class="media-card__link" href="#contacto">Ver proyectos <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+
+    </section>
+    <!--SECCION PRODUCTOS servicios-->
+       <section id="productos" class="products">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Shop Records</p>
+          <h2>Conoce nuestros productos</h2>
+          <p class="lead">Ofrecemos la mejor musica.</p>
+        </div>
+
+  <!--PRODUCTO 1 - TARJETA-->
+
+    <div class="product-grid">
+          <article class="product-card reveal">
+            <img src="img/blusas.jpeg" alt="Blusas">
+            <div class="product-body">
+              <span class="tag">Favoritas de las clientas</span>
+              <h3>Blusas</h3>
+              <p class="price">$600 MXN</p>
+              <p class="description">Elige tu favorita.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-caja')">Ver todo</button>
+            </div>
+          </article>
+          <!--PRODUCTO 2-->
+         
+          <article class="product-card reveal">
+            <img src="img/joyeria.jpg" alt="Nuestra selección de joyería">
+            <div class="product-body">
+              <span class="tag">Joyería</span>
+              <h3>Joyería</h3>
+              <p class="price">$200 MXN</p>
+              <p class="description">Los mejores accesorios.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-caja')">Ver todo</button>
+            </div>
+          </article>
+        <!--PRODUCTO 3-->
+          
+          <article class="product-card reveal">
+            <img src="img/bolsa.jpg" alt="Bolsas">
+            <div class="product-body">
+              <span class="tag">Bolsas</span>
+              <h3>Bolsas</h3>
+              <p class="price">$800 MXN</p>
+              <p class="description">Elige tu bolsa ideal.</p>
+              <button type="button" class="btn card" onclick="openModal('modal-caja')">Ver todos</button>
+            </div>
+          </article>
+          </div>
+          </div>
+        </section>
+        <!-- Sección Diferenciadora-->
+         <section id="diferenciador" class="unicos">
+      <div class="container">
+        <div class="section-heading reveal">
+          <h2>¿Por qué somos los mejores?</h2>
+        </div>
+
+
+        <div class="benefits-grid">
+          <!--beneficio 1-->
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="sparkles"></i></div>
+            <h3>Productos de edición limitada</h3>
+            <p>No cualquiera puede tenerlo.</p>
+          </article>
+
+           <!--beneficio 2-->
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="tag"></i></div>
+            <h3>Precios accesibles</h3>
+            <p>Ropa de lujo a los mejores precios.</p>
+          </article>
+
+           <!--beneficio 3-->
+
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="shirt"></i></div>
+            <h3>Ropa de temporada</h3>
+            <p>Usa tus favoritos para cada estacón del año.</p>
+          </article>
+
+           <!--beneficio 4 -->
+           
+          <article class="benefit-card reveal">
+            <div class="benefit-icon"><i data-lucide="shopping-cart"></i></div>
+            <h3>Envíos a domicilio y tienda fisica</h3>
+            <p>Compra a tu manera.</p>
+          </article>
+
+          </div>
+          </div>
+          </section>
+<!--TESTIMONIOS, OPINIONES RESEÑAS,ETC-->
+ <section class="testimonials">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">--TESTIMONIOS</p>
+          <h2>Lo que dicen nuestros clientes</h2>
+        </div>
+
+
+        <div class="testimonial-viewport">
+          <div id="testimonial-track" class="testimonial-track">
+
+<!--clienta 1-->
+            <article class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img class="avatar" src="img/clienta1.jpg" alt="Retrato genérico de una mujer sonriente.">
+                  <div>
+                    <p class="name">Fatima Segura.</p>
+                    <p class="occasion">Regalo para mi mejor amiga</p>
+                  </div>
+                </div>
+                <p class="quote">"El regalo llegó precioso y súper bien empacado. Mi amiga quedó feliz."</p>
+                <div class="stars" aria-label="Cinco estrellas">★★★★★</div>
+              </div>
+            </article>
+
+            <!--clienta 2-->
+            <article class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img class="avatar" src="img/clienta2.jpg" alt="Retrato genérico de una mujer sonriente.">
+                  <div>
+                    <p class="name">Giselle Gonzalez.</p>
+                    <p class="occasion">Bolsa para fiesta</p>
+                  </div>
+                </div>
+                <p class="quote">"La bolsa hermosa, la podre utilizar en muchas ocasiones y la calidad es excelente, todas las invitadas me preguntaron donde la compré."</p>
+                <div class="stars" aria-label="Cinco estrellas">★★★★★</div>
+              </div>
+            </article>
+             <!--clienta 3-->
+            <article class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img class="avatar" src="img/venenito.jpg" alt="Retrato genérico de una mujer sonriente.">
+                  <div>
+                    <p class="name">Leona Rodriguez.</p>
+                    <p class="occasion">Aretes para diario</p>
+                  </div>
+                </div>
+                <p class="quote">"Necesitaba unos aretes para el dia a dia y encontre los mejores diseños aquí, no se dañan con el aua y la calidad es íncreible, temine llevando 4 pares."</p>
+                <div class="stars" aria-label="Cinco estrellas">★★★★★</div>
+              </div>
+            </article>
+
+</main>
+</main>
+<!--FOOTER O PIE DE PÁGINA-->
+<!-- Pie de página -->
+  <footer class="site-footer">
+    <p>© <span id="current-year"></span> TU MARCA. Todos los derechos reservados.</p>
+    <a href="#inicio">Volver arriba ↑</a>
+  </footer>
+
+  <script src="js/script.js"></script>
 
 </body>
 </html>
