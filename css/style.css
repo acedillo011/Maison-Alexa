@@ -390,7 +390,40 @@ h1, h2, h3 {
   display: inline-flex;
 }
 
+.contact-panel {
+  display: grid;
+  gap: 2rem;
+  background: #f8f0df;
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  padding: 1.5rem;
+}
+.contact-text .btn { margin-top: 1.8rem; width: 100%; }
+.contact-info {
+  background: #fff;
+  border-radius: 24px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 14px rgba(0,0,0,.04);
+}
+.contact-info ul { display: flex; flex-direction: column; gap: 1.2rem; }
+.contact-info li { display: flex; align-items: center; gap: .75rem; }
+.contact-info i {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #C58FA2;
+  color: var(--coral-dark);
+  flex-shrink: 0;
+}
+.contact-info a { font-weight: 700; color: var(--coral-dark); text-decoration: underline; text-decoration-color: #cfa092; }
 
+
+@media (min-width: 900px) {
+  .contact-panel { grid-template-columns: 1.1fr .9fr; padding: 2.5rem; }
+  .contact-text .btn { width: auto; }
+}
 
   .site-footer {
     align-items: flex-start;
@@ -402,7 +435,7 @@ h1, h2, h3 {
   display: inline-flex;
 }
 
-.tag-light { background: rgba(255,255,255,.2);
+.tag-light { background: rgba(234, 198, 216, 0.2);
    color: #fff;
    }
 section { 
@@ -497,6 +530,9 @@ section {
 
 
 button:focus-visible, a:focus-visible { outline: 3px solid #1e6b72; outline-offset: 3px; }
+
+
+
 
   .site-footer {
   display: flex;
